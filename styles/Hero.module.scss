@@ -1,0 +1,94 @@
+@import './_var';
+
+.heroWrapper {
+	position: relative;
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+
+	&.small {
+		height: 50vh;
+	}
+
+	&.medium {
+		height: 75vh;
+	}
+
+	&.large {
+		height: 100vh;
+	}
+}
+
+.imageWrapper {
+	z-index: -1;
+
+	&:after {
+		bottom: 0;
+		content: '';
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		opacity: 0.3;
+		background-color: rgba(33, 33, 33, 1);
+	}
+}
+
+.content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 0.6rem solid $color-white;
+	width: auto;
+	padding: 2rem 1rem;
+	align-self: center;
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		padding: 3rem 5.6rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+		padding: 4.4rem 5.6rem;
+	}
+}
+
+.title {
+	font-family: $font-oswald;
+	font-weight: normal;
+	color: $color-white;
+	text-align: center;
+	font-size: 4.6rem;
+	line-height: 1.2;
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 6.1rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+		font-size: 7.2rem;
+	}
+}
+
+.subtitle {
+	font-family: $font-brush;
+	font-size: 2.6rem;
+	font-weight: normal;
+	color: $color-white;
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 2.9rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+		font-size: 3.2rem;
+	}
+}
+
+.image {
+	object-position: center;
+	object-fit: cover;
+}
