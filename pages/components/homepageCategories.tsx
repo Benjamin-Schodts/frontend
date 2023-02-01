@@ -5,7 +5,7 @@ import styles from '../../styles/HomepageCategories.module.scss';
 export default function Home({ categories }: any) {
 	return (
 		<div className={styles.categoriesList}>
-			{categories.map((category: any) => {
+			{categories?.map((category: any) => {
 				return (
 					<div key={category.id} className={styles.categoryContainer}>
 						<Link
