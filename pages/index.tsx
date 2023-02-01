@@ -26,7 +26,12 @@ export default function Home({ homepage }: any) {
 			{homepage.homepage.notification ? (
 				<Notification notification={homepage.homepage.notification} />
 			) : null}
-			<Hero hero={homepage.homepage.hero} size={homepage.homepage.size} />
+			{homepage.homepage.hero ? (
+				<Hero
+					hero={homepage.homepage.hero}
+					size={homepage.homepage.size}
+				/>
+			) : null}
 
 			<main className={styles.container}>
 				{homepage.homepage.categories ? (
